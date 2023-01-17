@@ -10,6 +10,7 @@ public class City implements Comparable<City> {
 	private String name, state, designation;
 	private int population;
 	
+	// Constructor
 	public City(String name, String state, String type, int population) {
 		this.name = name;
 		this.state = state;
@@ -37,20 +38,38 @@ public class City implements Comparable<City> {
 	 *	@param other		the other City to compare
 	 *	@return				true if city name and state name equal; false otherwise
 	 */
+	 public boolean equals(City other) {
+		return other.state.equals(state) && other.name.equals(name);
+	 }
 	
-	/**	Accessor methods */
+	/**
+	 * Accessor method to get city name
+	 * @return  city name 
+	 */
 	public String getName() {
 		return name;
 	}
 	
+	/**
+	 * Accessor method to get state
+	 * @return  state name
+	 */
 	public String getState() {
 		return state;
 	}
 	
+	/**
+	 * Accessor method to get city type
+	 * @return  city designation/type
+	 */
 	public String getDesignation() {
 		return designation;
 	}
 	
+	/**
+	 * Accessor method to get city population
+	 * @return  city population
+	 */
 	public int getPopulation() {
 		return population;
 	}

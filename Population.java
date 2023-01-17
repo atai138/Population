@@ -27,13 +27,14 @@ public class Population {
 	private SortMethods sort = new SortMethods();
 	private long milliSec = -1;
 	
+	// Main method
 	public static void main(String[] args) {
 		Population pop = new Population();
 		pop.runner();
 	}
 
 	/**
-	 *  Handles user input and output.
+	 *  Handles program input and output to run the program.
 	 */
 	public void runner() {
 		printIntroduction();
@@ -175,6 +176,10 @@ public class Population {
 		/**
 		 * Compare two City objects using the City's compareTo method,
 		 * which sorts by population.
+		 * 
+		 * @param  c1  City object 1
+		 * @param  c2  City object 2
+		 * @return     negative if c1 < c2, positive if c1 > c2, 0 if c1 = c2
 		 */
 		public int compare(City c1, City c2) {
 			return c1.compareTo(c2);
@@ -190,6 +195,10 @@ public class Population {
 		 * Compare two City objects using the City's compareTo method,
 		 * which sorts by population, but reverse the order so that it
 		 * is descending.
+		 * 
+		 * @param  c1  City object 1
+		 * @param  c2  City object 2
+		 * @return     negative if c1 < c2, positive if c1 > c2, 0 if c1 = c2
 		 */
 		public int compare(City c1, City c2) {
 			return c1.compareTo(c2)*(-1);
@@ -204,6 +213,10 @@ public class Population {
 		/**
 		 * Compare two City objects by comparing the names. If the names
 		 * are the same, use the City's compareTo method to compare.
+		 * 
+		 * @param  c1  City object 1
+		 * @param  c2  City object 2
+		 * @return     negative if c1 < c2, positive if c1 > c2, 0 if c1 = c2
 		 */
 		public int compare(City c1, City c2) {
 			int name = c1.getName().compareTo(c2.getName());
@@ -222,6 +235,10 @@ public class Population {
 		 * Compare two City objects by comparing the names, but reverse
 		 * the order so that it is descending. If the names are the same,
 		 * use the City's compareTo method to compare.
+		 * 
+		 * @param  c1  City object 1
+		 * @param  c2  City object 2
+		 * @return     negative if c1 < c2, positive if c1 > c2, 0 if c1 = c2
 		 */
 		public int compare(City c1, City c2) {
 			int name = c1.getName().compareTo(c2.getName())*(-1);

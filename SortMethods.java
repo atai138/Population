@@ -28,6 +28,7 @@ public class SortMethods {
      * 
      * @param arr   array of City objects to sort
      * @param comp  comparator to sort City objects
+     * @return      time it took to sort in milliseconds
      */
     public long selectionSort(List<City> arr, Comparator<City> comp) {
         long startMillisec = System.currentTimeMillis();
@@ -48,6 +49,7 @@ public class SortMethods {
      * 
      * @param arr   array of City objects to sort
      * @param comp  comparator to sort City objects
+     * @return      time it took to sort in milliseconds
      */
     public long insertionSort(List<City> arr, Comparator<City> comp) {
         long startMillisec = System.currentTimeMillis();
@@ -69,6 +71,7 @@ public class SortMethods {
      * 
      * @param arr   array of City objects to sort
      * @param comp  comparator to sort City objects
+     * @return      time it took to sort in milliseconds
      */
     public long mergeSort(List<City> arr, Comparator<City> comp) {
         long startMillisec = System.currentTimeMillis();

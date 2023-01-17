@@ -55,7 +55,7 @@ public class SortMethods {
         long startMillisec = System.currentTimeMillis();
         int size = arr.size();
         for (int n = 1; n < size; n++) {
-            City placeThis = arr.get(n);
+			City placeThis = arr.get(n);
             int i;
             for (i = n; i > 0 && comp.compare(placeThis, arr.get(i - 1)) < 0; i--) {
                 arr.set(i, arr.get(i - 1));

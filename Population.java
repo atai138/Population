@@ -48,7 +48,13 @@ public class Population {
 
 		do {
 			printMenu();
-			selection = Prompt.getInt("Enter selection");
+			
+			do {
+				selection = Prompt.getInt("Enter selection");
+				if (selection != 9 && (selection < 1 || selection > 6))
+					System.out.println("Please enter a valid option.");
+			} while (selection != 9 && (selection < 1 || selection > 6));
+			
 			if (selection != 9) {
 				if (selection == 1) {
 					milliSec = sort.selectionSort(cities, new AscendingPopulation());
